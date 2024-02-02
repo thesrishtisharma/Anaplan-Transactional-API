@@ -1,0 +1,356 @@
+{
+	"info": {
+		"_postman_id": "dd8c5c7f-2ac2-425c-a39b-eda667d1f8a9",
+		"name": "Anaplan Transactional APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25502468"
+	},
+	"item": [
+		{
+			"name": "1. List User Workspaces",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "AnaplanAuthToken {{AuthToken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{anaplanUrl}}/workspaces",
+					"host": [
+						"{{anaplanUrl}}"
+					],
+					"path": [
+						"workspaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. List Models in a Workspace",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "AnaplanAuthToken {{AuthToken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{anaplanUrl}}/workspaces/{{workspaceId}}/models",
+					"host": [
+						"{{anaplanUrl}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}",
+						"models"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Retrieve Lists in a Model",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "AnaplanAuthToken {{AuthToken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{anaplanUrl}}/workspaces/{{workspaceId}}/models/{{modelId}}/lists",
+					"host": [
+						"{{anaplanUrl}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}",
+						"models",
+						"{{modelId}}",
+						"lists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Get List line items",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "AnaplanAuthToken {{AuthToken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{anaplanUrl}}/workspaces/{{workspaceId}}/models/{{modelId}}/lists/{{listId}}/items",
+					"host": [
+						"{{anaplanUrl}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}",
+						"models",
+						"{{modelId}}",
+						"lists",
+						"{{listId}}",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Get dimensions of a module",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "AnaplanAuthToken {{AuthToken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{anaplanUrl}}/workspaces/{{workspaceId}}/models/{{modelId}}/views/{{viewId}}/",
+					"host": [
+						"{{anaplanUrl}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}",
+						"models",
+						"{{modelId}}",
+						"views",
+						"{{viewId}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Get Module data with dimensions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "AnaplanAuthToken {{AuthToken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{anaplanUrl}}/workspaces/{{workspaceId}}/models/{{modelId}}/views/{{viewId}}/dimensions/{{dimensionId}}/items",
+					"host": [
+						"{{anaplanUrl}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}",
+						"models",
+						"{{modelId}}",
+						"views",
+						"{{viewId}}",
+						"dimensions",
+						"{{dimensionId}}",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Add data into list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "AnaplanAuthToken n3vXSn4gTXaeo1W2kDLUzg==.0ED6z36cUa/zxgsy6oNLEXWM4LRNUp/iJ7fndWYheNh+9awTV2NVgRQNvwaeqypAn2/MgZz522o6BV6pTHssGgPx8e7SRa3q2pY3wdOCfCDVsL11ggZ88FXXYPio1x7l9bQigEA+0jndeSX+pSZXiBRmFMjQjUIAks9tcMsBmOWE0+XLhQ3gNEUyVpWHycdhjrXzQcgnC2XM5LCOzJZaAk8xLUPIrGIC1flO3Uirqlt1xU4FUudWhYTZDJRS9HlKkavECIK8mQjz1g5ofF21xZiFoDMf6ywZ38cVDL5Z8+eapyG3eICya78IIRrR2/p+6KIsO583FDOVdg8UmZeoIrfKfFPzwHY1qyAW3he+cKerWQq6VtgfkQGXBv3ofYcN+kW+PFndGlxNYM48POUAn76lWzsqSpKRL7uzfxHVpfQZCp9/iJZGLWBtxbeBIafOjhc+5aJixXg2XpG9qVmgo58JvZnYJnfckMig1E+gHXXb+O++JWied06zUXkz3qLSN+rGHGQeZBCUQCkvGfl/XA==.EUm0xV533IEkdjnpSlhMHeMfP3YDsyH6Q2hoZwhRLWM=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"items\": [\r\n        {\r\n            \"name\": \"India\",\r\n            \"code\": \"IND\",\r\n            \"properties\": {\r\n                \"Country Name\": \"India\",\r\n                \"GDP (USD (in crores))\": 0,\r\n                \"Dated\": \"08/14/2023\"\r\n            }\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{anaplanUrl}}/workspaces/{{workspaceId}}/models/{{modelId}}/lists/{{listId}}/items?action=add",
+					"host": [
+						"{{anaplanUrl}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}",
+						"models",
+						"{{modelId}}",
+						"lists",
+						"{{listId}}",
+						"items"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "add"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8. Add data into module",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "AnaplanAuthToken {{AuthToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"lineItemId\": {{lineItemId}},\r\n    \"dimensions\": [\r\n        {\r\n            \"dimensionId\": {{dimensionId}},\r\n            \"itemId\": {{itemId}}\r\n        }\r\n    ],\r\n    \"value\": \"Srishti\"\r\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{anaplanUrl}}/workspaces/{{workspaceId}}/models/{{modelId}}/modules/{{moduleId}}/data",
+					"host": [
+						"{{anaplanUrl}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}",
+						"models",
+						"{{modelId}}",
+						"modules",
+						"{{moduleId}}",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9. Update list items",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "AnaplanAuthToken {{AuthToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"items\": [\r\n        {\r\n            \"name\": \"India\",\r\n            \"code\": \"IND\",\r\n            \"properties\": {\r\n                \"Country Name\": \"India\",\r\n                \"GDP (USD (in crores))\": 2500000,\r\n                \"Dated\": \"08/14/2023\"\r\n            }\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{anaplanUrl}}/workspaces/{{workspaceId}}/models/{{modelId}}/lists/{{listId}}/items",
+					"host": [
+						"{{anaplanUrl}}"
+					],
+					"path": [
+						"workspaces",
+						"{{workspaceId}}",
+						"models",
+						"{{modelId}}",
+						"lists",
+						"{{listId}}",
+						"items"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "AuthToken",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "anaplanUrl",
+			"value": "https://api.anaplan.com/2/0",
+			"type": "string"
+		},
+		{
+			"key": "workspaceId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "modelId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "listId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "viewId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "dimensionId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "moduleId",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
